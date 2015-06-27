@@ -34,7 +34,7 @@
         okureta.push(randomKureta);
         if(okureta.length === kuretaStrLen){
           if(okureta.join("") === kuretaStr){
-            resultText = "クレタシはオフ会に" + count + "時間遅れました！！";
+            var resultText = "クレタシはオフ会に" + count + "時間遅れました！！";
             document.getElementById("result").innerHTML = resultText;
             document.getElementById("tweet-button").setAttribute("data-text", resultText);
             break;
