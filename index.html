@@ -12,7 +12,6 @@
     <a id="tweet-button" href="https://twitter.com/share" class="twitter-share-button" data-text="" data-size="large">Tweet</a>
     
     <script>
-     
       !function(d,s,id){
         var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
         if(!d.getElementById(id)){
@@ -35,7 +34,7 @@
         okureta.push(randomKureta);
         if(okureta.length === kuretaStrLen){
           if(okureta.join("") === kuretaStr){
-            resultText = "クレタシはオフ会に" + count + "時間遅れました！！";
+            var resultText = "クレタシはオフ会に" + count + "時間遅れました！！";
             document.getElementById("result").innerHTML = resultText;
             document.getElementById("tweet-button").setAttribute("data-text", resultText);
             break;
@@ -45,6 +44,5 @@
       }
 
     </script>
-
   </body>
 </html>
