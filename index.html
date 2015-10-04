@@ -1,54 +1,23 @@
-<!DOCTYPE html>
+---
+layout: default
+---
 
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="description" content="クレタシが永遠に遅れ続ける可能性">
-    <title>クレタシがオクレタ</title>
-    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-  </head>
-  <body>
-   
-    <p id="kuretareku"></p>
-    <p id="result"></p>
-    <p><a id="tweet-button" href="https://twitter.com/share" class="twitter-share-button" data-text="" data-size="large">Tweet</a></p>
-    <p><a class="twitter-timeline"  href="https://twitter.com/search?q=tenkisi.github.io" data-widget-id="614748129401794560">tenkisi.github.ioに関するツイート</a></p>
-    <blockquote class="twitter-tweet" lang="ja"><p lang="ja" dir="ltr">おクレタが完成するまでクレタシがオフ会に遅れ続けるアプリ(文字数=時間)</p>&mdash; 菰根 (@macomonet) <a href="https://twitter.com/macomonet/status/614469816506712064">2015, 6月 26</a></blockquote>
-    <blockquote class="twitter-tweet" lang="ja"><p lang="ja" dir="ltr">おレタタククタクタレおおタおクタレレおおタおレククタおクレおおタおクレタ&#10;&#10;クレタシはオフ会に 36 時間遅れました！！(おクレタは言えなかった)</p>&mdash; 菰根 (@macomonet) <a href="https://twitter.com/macomonet/status/614470882065387520">2015, 6月 26</a></blockquote>
+<div class="home">
 
-    <script>
-            
-      !function(d,s,id){
-        var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
-        if(!d.getElementById(id)){
-          js=d.createElement(s);
-          js.id=id;
-          js.src=p+'://platform.twitter.com/widgets.js';
-          fjs.parentNode.insertBefore(js,fjs);
-        }
-      }(document, 'script', 'twitter-wjs');
-      
-      var kuretaStr = "オクレタ";
-      var kuretaStrLen = kuretaStr.length;
-      var okureta = new Array();
-      var count = 0;
+  <h1 class="page-heading">Posts</h1>
 
-      while(true){
-        count++;
-        var randomKureta = kuretaStr.charAt(Math.floor(Math.random() * kuretaStrLen));
-        document.getElementById("kuretareku").innerHTML += randomKureta;
-        okureta.push(randomKureta);
-        if(okureta.length === kuretaStrLen){
-          if(okureta.join("") === kuretaStr){
-            var resultText = "クレタシはオフ会に" + count + "時間遅れました！！";
-            document.getElementById("result").innerHTML = resultText;
-            document.getElementById("tweet-button").setAttribute("data-text", resultText);
-            break;
-          }
-          okureta.shift();
-        }
-      }
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-    </script>
-  </body>
-</html>
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
