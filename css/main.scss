@@ -127,7 +127,7 @@ a.site-post-link{
   padding: 24px 96px;
 
   @include media-query($on-palm){
-    padding: 24px 4px;
+    padding: 24px 16px;
   }
 }
 
