@@ -4,6 +4,7 @@ email: tenkisi221@gmail.com
 description: "tenkisiの日記です。なんかなんでも記事にします。クソ眠いです。なぜ眠いのかというと、このサイトがまだ完成していないからです。"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://tenkisi.github.io" # the base hostname & protocol for your site
+permalink: /:categories/:year/:month/:day/:title
 
 # Build settings
 markdown: kramdown
