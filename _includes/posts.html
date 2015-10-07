@@ -2,7 +2,7 @@
   <h1>投稿</h1>
   <ul>
   {% for post in site.posts %}
-    <li class="site-post"><a class="site-post-link" href="{{ post.id }}">{{ post.title }} - {{ post.date | date:"%Y %m/%d" }}</a></li>
+    <li class="site-post"><a class="site-post-link" href="{{ post.url }}">{{ post.title }} - {{ post.date | date:"%Y %m/%d" }}</a></li>
   {% endfor %}
   </ul>
 </div>
