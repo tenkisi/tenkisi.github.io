@@ -48,6 +48,10 @@ a{
   &:active{color: $grey-color;}
 }
 
+pre{
+  margin: 0;
+}
+
 .site-header{
   padding: 128px 0px 0px;
   background-color: $orrange-color;
