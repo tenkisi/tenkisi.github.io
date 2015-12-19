@@ -63,12 +63,8 @@ small{
 }
 
 .site-footer{
-  padding: 0px 0px 64px;
+  margin: 0px 0px 64px;
   text-align: center;
-}
-
-.site-footer-c{
-
 }
 
 .site-title{
@@ -93,8 +89,8 @@ small{
   list-style: none;
 
   @include media-query($on-palm){
-    margin: 0 0;
-    padding: 24px 0;
+    margin: 24px 0;
+    padding: 0;
   }
 }
 
