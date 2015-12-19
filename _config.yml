@@ -1,10 +1,15 @@
 # Site settings
 title: Tenkisi_
 email: tenkisi221@gmail.com
-description: "tenkisiの日記です。なんかなんでも記事にします。クソ眠いです。なぜ眠いのかというと、このサイトがまだ完成していないからです。"
+description: "tenkisi（てんきし）の日記です。なんかなんでも記事にします。クソ眠いです。なぜ眠いのかというと、このサイトがまだ完成していないからです。"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://tenkisi.github.io" # the base hostname & protocol for your site
 permalink: /:categories/:year/:month/:day/:title
+
+#Pagination
+gems: [jekyll-paginate]
+paginate: 12 
+paginate_path: "blog/page:num"
 
 # Build settings
 markdown: redcarpet
@@ -16,5 +21,6 @@ highlighter: rouge
 twitter_username: ten_kisi
 github_username: tenkisi
 
+#Server
 host: 192.168.230.128
 port: 4000

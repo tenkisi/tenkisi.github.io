@@ -52,13 +52,14 @@ pre{
   margin: 0;
 }
 
+small{
+  font-size: medium;
+}
+
 .site-header{
   padding: 128px 0px 0px;
   background-color: $orrange-color;
 
-  @include media-query($on-palm){
-    text-align: center;
-  }
 }
 
 .site-footer{
@@ -66,11 +67,15 @@ pre{
   text-align: center;
 }
 
+.site-footer-c{
+
+}
+
 .site-title{
   font-family: Helvetica, sans-serif;
   font-size: 128px;
   color: $white-color;
-  margin: 0px 32px;
+  margin: 0 32px;
   text-decoration: none;
 
   &:link{color: $white-color;}
@@ -80,13 +85,12 @@ pre{
 
   @include media-query($on-palm){
     font-size: 48px;
+    margin: 0 16px
   }
 }
 
 .site-contents{
   list-style: none;
-  margin: 0 16px;
-  padding: 24px 16px;
 
   @include media-query($on-palm){
     margin: 0 0;
@@ -101,8 +105,7 @@ pre{
 
   @include media-query($on-palm){
     display: block;
-    margin: 0 auto;
-    padding: 0 16px;
+    margin: 0 16px;
     width: auto;
   }
 }
@@ -137,4 +140,18 @@ a.site-post-link{
 
 .site-share{
   margin: 24px 0;
+}
+
+.posts-pagination{
+  width: 80%;
+  margin: 24px auto;
+}
+
+.posts-pagination-navi-list{
+  padding: 0;
+  list-style: none;
+}
+
+.posts-pagination-navi{
+  display: inline-block;
 }
