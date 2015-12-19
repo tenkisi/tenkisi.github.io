@@ -1,5 +1,5 @@
 <div class="site-posts">
-  <h1>投稿</h1>
+  <a href="/blog"><h1>投稿</h1></a>
   <ul>
   {% for post in site.posts %}
     <li class="site-post"><a class="site-post-link" href="{{ post.url }}">{{ post.title }} - {{ post.date | date:"%Y %m/%d" }}</a></li>
