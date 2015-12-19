@@ -139,8 +139,11 @@ a.site-post-link{
 }
 
 .posts-pagination{
-  width: 80%;
-  margin: 24px auto;
+  margin: 24px 32px;
+  
+  @include media-query($on-palm){
+    margin: 24px 16px;
+  }
 }
 
 .posts-pagination-navi-list{
