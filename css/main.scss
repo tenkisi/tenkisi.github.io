@@ -101,7 +101,7 @@ img{
 .site-content{
   display: inline-block;
   vertical-align: top;
-  width: 49%;
+  width: 50%;
 
   @include media-query($on-palm){
     display: block;
