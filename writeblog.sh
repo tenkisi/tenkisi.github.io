@@ -11,13 +11,18 @@ YesNo(){
     done
 }
 
+abort(){
+    echo "$1" 1>&2
+    exit 1
+}
+
 cd $(dirname $0)
 
 read -p "Please input a file name:" filename
-[ -z "$filename" ] && (echo "Error! blank can't become file name" 1>&2 ; exit 1)
+[ -z "$filename" ] && abort "Error! blank can't become file name"
 
 read -p "Please input a blog title:" title 
-[ -z "$title" ] && (echo "Error! blank can't become blog title" 1>&2 ; exit 1)
+[ -z "$title" ] && abort "Error! blank can't become blog title"
 
 filename=$(date +"%Y-%m-%d-")"$filename"
 
