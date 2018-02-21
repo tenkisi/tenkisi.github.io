@@ -18,7 +18,8 @@ highlighter: rouge
 #SNS
 twitter_username: ten_kisi
 github_username: tenkisi
+soundcloud_username: ten_kisi
 
 #Server
-host: 192.168.230.128
+host: 192.168.0.10
 port: 50000
